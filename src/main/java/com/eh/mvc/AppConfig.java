@@ -36,4 +36,9 @@ public class AppConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new MyFirstInterceptor()).addPathPatterns("/**");
     }
+
+    @Override
+    public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
+//        configurer.registerCallableInterceptors()
+    }
 }
